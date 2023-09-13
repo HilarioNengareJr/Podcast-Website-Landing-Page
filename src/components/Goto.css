@@ -1,0 +1,30 @@
+.hydrated {
+    visibility: inherit;
+}
+
+
+.go-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: var(--blue-ryb);
+    color: var(--white);
+    font-size: 25px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition);
+    z-index: 2;
+  }
+  
+  .go-top.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+  
+  .go-top:is(:hover, :focus) { --blue-ryb: hsl(221, 100%, 40%); }

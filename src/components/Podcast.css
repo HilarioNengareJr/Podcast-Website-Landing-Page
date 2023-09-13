@@ -1,0 +1,104 @@
+.podcast *,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+.podcast {
+    padding: 60px 0;
+}
+
+.podcast-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.podcast-card {
+    border-radius: 4px;
+}
+
+.card-banner {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+.card-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+.podcast-card:is(:hover, :focus) .card-banner::before {
+    background: hsla(0, 0%, 100%, 0.1);
+}
+
+.card-banner img {
+    width: 100%;
+}
+
+.card-banner-icon {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    color: var(--white);
+    border: 2px solid var(--white);
+    border-radius: 50%;
+    font-size: 20px;
+    transition: var(--transition);
+}
+
+.podcast-card:is(:hover, :focus) .card-banner-icon {
+    background: var(--white);
+}
+
+.card-meta {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    color: var(--heliotrope-gray);
+    font-size: var(--fs-4);
+    margin-left: 35px;
+    margin-bottom: 15px;
+}
+
+.card-meta::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -35px;
+    transform: translateY(-2px);
+    width: 25px;
+    height: 2px;
+    background: var(--heliotrope-gray);
+}
+
+.podcast-card .card-title {
+    display: inline;
+    padding: 3px 0;
+    background: var(--gradient);
+    background-position: 0 95%;
+    background-repeat: no-repeat;
+    background-size: 0 2px;
+    transition: 1s;
+}
+
+.podcast-card:is(:hover, :focus) .card-title {
+    background-size: 100% 2px;
+}
+

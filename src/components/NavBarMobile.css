@@ -1,0 +1,177 @@
+@media screen and (min-width:1000) {
+    .active {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    *,
+    *::before,
+    *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+
+    .active {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a,
+    img,
+    span,
+    input,
+    button,
+    ion-icon {
+        display: block;
+    }
+
+    button {
+        font: inherit;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    input {
+        font: inherit;
+        border: none;
+        width: 100%;
+    }
+
+    :focus {
+        outline-offset: 4px;
+    }
+
+    header {
+        position: fixed;
+        top: -90px;
+        left: 0;
+        width: 100%;
+        padding-block: 15px;
+        box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.5);
+        background: var(--russian-violet);
+        transition: var(--transition);
+        z-index: 4;
+    }
+
+    header {
+        top: 0;
+        padding-inline: 15px;
+    }
+
+    header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-toggle-btn {
+        color: var(--white);
+        font-size: 35px;
+        border-radius: 4px;
+    }
+
+    .nav-toggle-btn ion-icon {
+        --ionicon-stroke-width: 40px;
+    }
+
+    .nav-toggle-btn:focus{
+        background: hsla(0, 0%, 100%, 0.05);
+    }
+
+    .navbar {
+        display: grid;
+        position: fixed;
+        bottom: -270px;
+        left: 0;
+        width: 100%;
+        background: var(--russian-violet);
+        border-radius: 8px 8px 0 0;
+        padding: 30px 10px 10px;
+        box-shadow: 0 -1px 10px hsla(0, 0%, 0%, 0.5);
+        z-index: 2;
+        visibility: hidden;
+        transition: 1s ease-in !important;
+    }
+
+    .navbar.active {
+        bottom: 0;
+        visibility: visible;
+        transition: cubic-bezier(0.19, 1, 0.22, 1) ease-out;
+    }
+
+    .navbar-list {
+        padding-bottom: 5px;
+        border-bottom: 1px solid hsla(0, 0%, 100%, 0.05);
+        margin-bottom: 5px;
+    }
+
+    .navbar::before {
+        content: "";
+        position: absolute;
+        top: 13px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 4px;
+        background: hsla(0, 0%, 100%, 0.05);
+        border-radius: 5px;
+    }
+
+    .navbar-link {
+        color: var(--white);
+        font-size: var(--fs-4);
+        padding: 10px;
+        border-radius: 4px;
+    }
+
+    .navbar-link:is(:hover, :focus) {
+        background: hsla(0, 0%, 100%, 0.1);
+    }
+
+    .navbar-actions {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .navbar-btn {
+        color: var(--white);
+        font-size: 25px;
+        padding: 5px;
+        border-radius: 4px;
+    }
+
+    .navbar-btn:is(:hover, :focus),
+    .navbar-actions .btn:is(:hover, :focus) {
+        background: hsla(0, 0%, 100%, 0.1);
+    }
+
+    .overlay {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 1;
+        transition: var(--transition);
+    }
+
+    .overlay.active {
+        pointer-events: all;
+        background: hsla(0, 0%, 0%, 0.7);
+    }
+
+    .mobile-logo img {
+        border-radius: 50% !important;
+        width: 50% !important;
+        box-shadow: var(--shadow);
+    }
+}

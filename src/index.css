@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Bricolage+Grotesque:opsz@10..48&family=Gruppo&family=Josefin+Sans&family=Source+Code+Pro&family=Text+Me+One&family=Titillium+Web&display=swap');
+
+:root {
+  /* Color */
+  --flourescent-blue: hsl(178, 100%, 49%);
+  --heliotrope-gray: hsl(253, 15%, 70%);
+  --russian-violet: hsl(252, 80%, 16%);
+  --dark-violet: hsl(252, 100%, 12%);
+  --space-cadet: hsl(247, 43%, 20%);
+  --blue-ryb: hsl(221, 100%, 50%);
+  --white: hsl(0, 0%, 100%);
+
+  /* Gradient */
+  --gradient: linear-gradient(to right, var(--flourescent-blue), var(--blue-ryb));
+
+  /* Typography */
+  --ff-josefin: 'Josefin sans', sans-serif;
+
+  --transition: 0.25s ease-in-out;
+
+  /* Shadow */
+  --shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
+  --shadow-1: rgba(0, 0, 0, 0.5);
+
+  --section-padding: 70px;
+}
+
+html {
+  font-family: var(--ff-josefin);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--dark-violet);
+  font-family: var(--ff-josefin), sans-serif;
+}
+
+a {
+  display: block;
+  font-family: var(--ff-josefin), sans-serif;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--gradient);
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.nav-link:is(:hover, :focus) {
+  background: var(--gradient);
+  width: max-content;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 18px;
+  font-weight: 700px;
+}
+
+input {
+  font-family: var(--josefyn);
+  font-size: 17px;
+  color: var(--blue-ryb);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-violet);
+  border-left: 1px solid var(--space-cadet);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsla(0, 0%, 100%, 0.8);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsla(0, 0%, 100%, 0.6);
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.align-left {
+  float: left;
+}
+
+.align-right {
+  float: right;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+span {
+  display: block;
+}
+
+button {
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.btn {
+  color: var(--white);
+  font-size: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border-radius: 4px;
+}
+
+.btn-primary {
+  background: var(--gradient);
+  background-size: 500%;
+  background-position: right;
+  gap: 8px;
+  transition: background 0.5s;
+}
+
+.btn-primary:is(:hover, :focus) {
+  background-position: left;
+}
+
+.btn-primary>ion-icon {
+  font-size: 18px;
+}
+
+.btn-primary>span {
+  margin-top: 3px;
+}
+
+/* Responsive Layout */
+
+@media screen and (max-width:768px) {
+
+  *,
+  ::before,
+  ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .hero {
+    padding-block-start: 70px;
+    padding-inline: 5px;
+  }
+
+  .section-row {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 15px;
+  }
+
+  .hero-content {
+    order: 1;
+    margin: auto;
+  }
+
+  .hero-text {
+    font-size: 17px;
+    padding-top: 20px;
+  }
+
+  .hero-content img {
+    margin: auto;
+  }
+
+  /* Hero Links Styles */
+  .hero-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .btn-link {
+    display: flex;
+    align-items: center;
+  }
+
+  .btn-link img {
+    margin-right: 10px;
+  }
+
+  .btn-link {
+    margin-bottom: 5px;
+  }
+
+  .hero-btn {
+    margin-block: 20px;
+    width: 75%;
+    margin-inline: auto;
+  }
+
+  .d-lg {
+    display: none !important;
+  }
+
+  .podcast-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .podcast-list {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .newsletter {
+    margin: 15px !important;
+  }
+
+  .newsletter-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-content,
+  .card-form {
+    width: 100% !important;
+  }
+
+  .newsletter-card .btn {
+    position: relative;
+    cursor: not-allowed;
+    width: 90%;
+    margin: auto;
+  }
+
+  footer {
+    padding: 10px;
+  }
+
+  .footer-brand {
+    text-align: center;
+  }
+
+  .contact-info {
+    margin: auto;
+  }
+
+  .logo img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+
+  .social-list-box {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 769px) {
+  .d-sm {
+    display: none !important;
+  }
+
+  .d-small{
+    display: none !important;
+  }
+
+  
+}

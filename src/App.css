@@ -1,0 +1,16 @@
+main{
+    margin-top: 100px;
+}
+
+@media (max-width: 767px) {
+    .d-lg {
+      display: none !important;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .d-sm {
+      display: none !important;
+    }
+  }
+  
