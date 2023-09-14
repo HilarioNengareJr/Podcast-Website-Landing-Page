@@ -11,8 +11,10 @@
     "react-dom": "^18.2.0",
     "react-ionicons": "^4.2.1",
     "react-router-dom": "^6.15.0",
-    "react-scripts": "0.9.5"
+    "react-scripts": "0.9.5",
+    "styled-components": "^6.0.8"
   },
+  "homepage": "https://HilarioNengareJr.github.io/ipodcast",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -20,6 +22,5 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
-  },
-  "homepage": "https://HilarioNengareJr.github.io/ipodcast"
+  }
 }
