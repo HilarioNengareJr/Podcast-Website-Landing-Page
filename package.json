@@ -14,7 +14,7 @@
     "react-scripts": "0.9.5",
     "styled-components": "^6.0.8"
   },
-  "homepage": "https://HilarioNengareJr.github.io/ipodcast",
+  "homepage": "https://HilarioNengareJr.github.io/ipodcast/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
