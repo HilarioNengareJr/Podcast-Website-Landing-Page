@@ -2,7 +2,11 @@
   "name": "ipodcast",
   "version": "0.1.0",
   "private": true,
+<<<<<<< HEAD
   "homepage": "https://HilarioNengareJr.github.io/ipodcast/",
+=======
+  "homepage": "https://hilarionengarejr.github.io/ipodcast",
+>>>>>>> d27e6cf30b0084ceca71252a9b928db1e6cc7324
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
