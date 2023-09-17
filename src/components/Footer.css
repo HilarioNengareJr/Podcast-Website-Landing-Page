@@ -20,19 +20,18 @@ footer *,
 .footer-brand,
 .footer-brand .logo {
     margin-bottom: 25px;
-    max-width: 350px;
 }
 
 .logo img {
     width: 95px !important;
     border-radius: 15px;
+    margin: auto;
 }
 
 .footer-text {
     color: var(--heliotrope-gray);
     line-height: 1.6;
     font-size: 18px;
-
 }
 
 .footer-list {

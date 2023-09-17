@@ -82,7 +82,7 @@
         --ionicon-stroke-width: 40px;
     }
 
-    .nav-toggle-btn:focus{
+    .nav-toggle-btn:focus {
         background: hsla(0, 0%, 100%, 0.05);
     }
 
@@ -98,19 +98,12 @@
         box-shadow: 0 -1px 10px hsla(0, 0%, 0%, 0.5);
         z-index: 2;
         visibility: hidden;
-        transition: 1s ease-in !important;
+        transition: bottom 0.5s ease-in-out;
     }
 
     .navbar.active {
         bottom: 0;
         visibility: visible;
-        transition: cubic-bezier(0.19, 1, 0.22, 1) ease-out;
-    }
-
-    .navbar-list {
-        padding-bottom: 5px;
-        border-bottom: 1px solid hsla(0, 0%, 100%, 0.05);
-        margin-bottom: 5px;
     }
 
     .navbar::before {
@@ -123,6 +116,15 @@
         height: 4px;
         background: hsla(0, 0%, 100%, 0.05);
         border-radius: 5px;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .navbar-list {
+        padding-bottom: 5px;
+        border-bottom: 1px solid hsla(0, 0%, 100%, 0.05);
+        margin-bottom: 5px;
     }
 
     .navbar-link {
@@ -137,11 +139,25 @@
     }
 
     .navbar-actions {
-        width: 100%;
+        gap: 10px;
+    }
+
+    .navbar-actions {
+        max-width: 355px;
         display: flex;
         justify-content: space-around;
         align-items: center;
-        gap: 50px;
+    }
+
+    .navbar-btn {
+        color: var(--white);
+        font-size: 25px;
+        padding: 5px;
+        border-radius: 4px;
+    }
+
+    .navbar-actions .btn:is(:hover, :focus) {
+        background: hsl(221, 100%, 40%);
     }
 
     .navbar-btn {

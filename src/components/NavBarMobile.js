@@ -106,8 +106,8 @@ const NavBarMobile = () => {
                             <LogoPaypal
                                 color={'#ffffff'}
                                 title={'PAYPAL'}
-                                height="23px"
-                                width="23px"
+                                height="25px"
+                                width="25px"
                             />
                             <span>Donate</span>
                         </button>
