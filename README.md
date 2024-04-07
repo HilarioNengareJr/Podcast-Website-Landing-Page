@@ -1,6 +1,4 @@
-# iPodcast UI
-
-Welcome to the iPodcast user interface!
+# Podcast Website Landing Page
 
 ## Introduction
 
